@@ -1,0 +1,232 @@
+{
+  "rows": [
+    {
+      "title": "Environments",
+      "levels": [
+        [
+          "Environments provisioned manually.",
+          "New environments are time consuming to create and difficult to create consistently."
+        ],
+        [
+          "Creation of new environments is cheap.",
+          "Configuration management in use.",
+          "Long runing servers that get reconfigured (rather than a new server every time)"
+        ],
+        [
+          "Environment dependencies packaged with code. (vagrant, chef, berks)",
+          "Total environment parity, dev -> prod.",
+          "Simply reproducible environments."
+        ],
+        [
+          "Environment is data!",
+          "Auto scaling.",
+          "Consistent detailed metrics collected and analyzed.",
+          "Partially orchestrated cloud architecture using mostly 3rd party tools."
+        ],
+        [
+          "All environment managed effectively.",
+          "Provisioning fully automated and orchestrated.",
+          "Scheduled actions.",
+          "On demand test environments/environmentper-branch.",
+          "Multi region, infrastructure as code"
+        ]
+      ]
+    },
+    {
+      "title": "Deployments",
+      "levels": [
+        [
+          "Manual process for deploying software.",
+          "Environment-specific binaries.",
+          "Deployment scripts."
+        ],
+        [
+         "Automated on-demand deployment to some environments."
+        ],
+        [
+          "Fully automated, self-service push-botton process for deploying."
+        ],
+        [
+          "CI for non-prod",
+          "Automated tests run in prod.",
+          "Metrics collected and compared between releases, used to drive decision making"
+        ],
+        [
+          "CI for prod",
+          "No downtime for database updates",
+          "Extra regions do not make deployments harder"         
+        ]
+      ]
+    },
+    {
+      "title": "Release Management",
+      "levels": [
+        [
+          "Infrequent and unreliable releases",
+          "Manual proccess for building software",
+          "No management of artifacts and reports"
+        ],
+        [
+          "Painful and infrequent, but reliable, releases.",
+          "Limited traceability from requirements to release.",
+          "Builds can be automatically reproduced from source control."
+        ],
+        [
+          "Automatic dependency management.",
+          "Automated build and test on commit."
+        ],
+        [
+          "Code package baked into templates and containers on build.",
+          "Build metrics gathered, made visible, and acted on.",
+          "Builds are not left broken."
+        ],
+        [
+          "Code packages baked into containers.",
+          "Teams regularly meet to discuss integration problems and resolve them with automation, faster feedback, and better visibility."
+        ]
+      ]
+    },
+    {
+      "title": "Testing",
+      "levels": [
+        [
+          "Manual testing after development"
+        ],
+        [
+          "Auomated tests written as part of story development."
+        ],
+        [
+          "Automated unit and acceptance tests.",
+          "Testing part of development process.",
+          "Code coverage measured."
+        ],
+        [
+          "Quality metrics and trends tracked.",
+          "Moderate degree of code coverage."
+        ],
+        [
+          "Production rollbacks are rare.",
+          "Defects found and fixed immediately.",
+          "High degree of code coverage."
+        ]
+      ]
+    },
+    {
+      "title": "Data Management",
+      "levels": [
+        [
+          "Data migrations unversioned and provisioned manually"
+        ],
+        [
+          "Changes to data done with automated scripts versioned with application."
+        ],
+        [
+          "Database changes performed automatically as part of deployment process"
+        ],
+        [
+          "Database upgrades and rollbacks tested with every deployment.",
+          "Database performance monitored and optimized."
+        ],
+        [
+          "Release to release feeback loop of database performance and deployment process."
+        ]
+      ]
+    },
+    {
+      "title": "Application Ecosystem",
+      "levels": [
+        [
+          "Single server only",
+          "Monolithic sites",
+          "Confusing config",
+          "Everything connects to everything",
+          "Brittle and/or unclear dependencies",
+          "Unclear filesystem read/write locations",
+          "Sticky sessions"
+        ],
+        [
+          "Non-monolithic sites.",
+          "Components are separate applications.",
+          "Few global downtimes required."
+        ],
+        [
+          "Multiserver with shared filesystem for shared assets.",
+          "Memcached sessions.",
+          "Clear RW locations.",
+          "Application layer can be scaled horizontally."
+        ],
+        [
+          "Session service, not just memcached",
+          "Robust handling of failure states",
+          "Partially decoupled assets from build (better CDN usage)",
+          "Multi-region capable datastore.",
+          "Feature flags."
+        ],
+        [
+          "Service autodiscovery.",
+          "Chaos monkey.",
+          "Ephemeral.",
+          "No shared file system required for asset sharing, full CDN integration.",
+          "Applications are not data center bound."
+        ]
+      ]
+    },
+    {
+      "title": "Culture",
+      "levels": [
+        [
+          "Dedicated Silos",
+          "Releases 'thrown over the wall'"
+        ],
+        [
+          "Devs sit with Ops during deployment windows.",
+          "Improved deployment guides and scripts"
+        ],
+        [
+          "Ops and Dev teams share the same priority structure and goals.",
+          "DevOps team.",
+          "Automatic transparency."
+        ],
+        [
+          "Ops embedded in Dev teams",
+          "Tight feedback loop between development needs and ops projects",
+          "Ops in sprint planning, tasks coordinated",
+          "Devs start assuming some ops responsibilities"
+        ],
+        [
+          "Devs responsible for operations work",
+          "Ops SME group, no DevOps team"
+        ]
+      ]
+    },
+    {
+      "title": "Awareness",
+      "levels": [
+        [
+          "Hope."
+        ],
+        [
+          "Local log files.",
+          "Scripts that ssh in a loop to display/collect metrics.",
+          "Low/no alerting.",
+          "Servers must be manually added to monitoring/collection scripts.",
+          "Inconsistent retention of logs and metrics, if any."
+        ],
+        [
+          "Centralized log files (splunk, logstash, syslog).",
+          "Agent based monitoring (nagios, new relic).",
+          "Manual alert configuration.",
+          "Manual server addition and removal."
+        ],
+        [
+          "Automatic environment detection, don't need to manually add/remove agents.",
+          "Log messages are data, and can be alerted on."
+        ],
+        [
+          "Automatic anomaly detection.",
+          "Environment analytics."
+        ]
+      ]
+    }
+  ]
+}

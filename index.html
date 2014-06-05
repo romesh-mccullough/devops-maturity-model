@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class='container'>
+  <table class="table model-matrix">
+    <tr>
+      {% for header in site.data.headers %}
+        <th class='col-sm-2'>{{ header.title }}</th>
+      {% endfor %}
+    </tr>
+    {% for category in site.data.categories %}
+      <tr>
+        <td class='title'>{{ category.title }}</td>
+        {% for level in category.levels %}
+          <td class='level'>
+            <ul class='list-group'>
+              {% for item in level %}
+                <li class='list-group-item'>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+</div>
