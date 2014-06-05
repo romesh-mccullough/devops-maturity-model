@@ -1,6 +1,8 @@
 # DevOps Maturity Model
 
-This model is a tool to help gauge where your organization is on the path to DevOps awesomeness.  
+This model is a tool to help gauge where your organization is on the path to DevOps awesomeness.  View it here:
+
+http://romesh-mccullough.github.io/devops-maturity-model
 
 This is based largely on the table featured in http://blog.devopsguys.com/2013/02/06/maturing-the-continuous-delivery-pipeline/
 
