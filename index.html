@@ -10,7 +10,7 @@ layout: default
       {% endfor %}
     </tr>
     {% for category in site.data.categories %}
-      <tr>
+      <tr id='{{ category.title }}'>
         <td class='title'>{{ category.title }}</td>
         {% for level in category.levels %}
           <td class='level'>

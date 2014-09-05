@@ -5,3 +5,11 @@
   font-weight: bold;
   text-align: center;
 }
+
+.level:hover {
+  border: 1px solid black;
+}
+
+.selected {
+  background: #ABDE86;
+}
